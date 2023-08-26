@@ -1,23 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
+import checker from 'vite-plugin-checker';
 
 export default defineConfig({
 	server: {
 		open: true,
 	},
-	plugins: [
-		svgr({
-			exportAsDefault: true,
-		}),
-		react(),
-	],
-	resolve: {
-		alias: [
-			{
-				find: '@',
-				replacement: '/src',
-			},
-		],
-	},
+	plugins: [react(), tsconfigPaths(), svgr({ exportAsDefault: true }), checker({ typescript: true })],
 });
