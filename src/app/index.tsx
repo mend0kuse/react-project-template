@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { App } from '@/app/app';
-import './app/internationalization/i18n';
+import './internationalization/i18n';
 
 const domNode = document.getElementById('root');
 

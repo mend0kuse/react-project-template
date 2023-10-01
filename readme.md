@@ -6,3 +6,4 @@
 -   Typescript
 -   Eslint/Stylelint/Prettier
 -   react-i18next
+-   Vitest/RTL
