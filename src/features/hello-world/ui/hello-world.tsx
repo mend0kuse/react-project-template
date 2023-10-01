@@ -13,6 +13,7 @@ export const HelloWorld = () => {
 	return (
 		<div className={styles.wrapper}>
 			<h1>{t('Hello world')}</h1>
+
 			<div>
 				<button onClick={changeLang('ru')}>RU</button>
 				<button onClick={changeLang('en')}>EN</button>

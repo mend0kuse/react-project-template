@@ -8,10 +8,9 @@
 		"preview": "vite preview",
 		"dev": "vite",
 		"test": "vitest",
-		"lint:ts": "npx eslint **/*.{ts,tsx}",
-		"lint:ts:fix": "npx eslint **/*.{ts,tsx} --fix",
-		"lint:scss": "npx stylelint **/*.scss",
-		"lint:scss:fix": "npx stylelint **/*.scss --fix"
+		"commit": "cz",
+		"lint:ts": "npx eslint **/*.{ts,tsx} --fix",
+		"lint:scss": "npx stylelint **/*.scss --fix"
 	},
 	"keywords": [],
 	"author": "",
@@ -32,13 +31,17 @@
 		"@typescript-eslint/eslint-plugin": "^5.60.0",
 		"@typescript-eslint/parser": "^5.60.0",
 		"@vitejs/plugin-react": "^4.0.1",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.43.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-unused-imports": "^2.0.0",
+		"husky": "^8.0.3",
 		"jsdom": "^22.1.0",
+		"lint-staged": "^14.0.1",
 		"prettier": "2.8.8",
 		"sass": "^1.63.6",
 		"stylelint": "^15.9.0",
@@ -52,5 +55,14 @@
 		"vite-plugin-svgr": "^3.2.0",
 		"vite-tsconfig-paths": "^4.2.0",
 		"vitest": "^0.34.6"
-	}
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"lint-staged": {
+    "*.scss": "yarn run lint:scss",
+    "*.{ts,tsx}": "yarn run lint:ts"
+  }
 }

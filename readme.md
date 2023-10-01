@@ -7,3 +7,4 @@
 -   Eslint/Stylelint/Prettier
 -   react-i18next
 -   Vitest/RTL
+-   commitzen/lint-staged/husky
